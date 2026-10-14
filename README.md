@@ -6,19 +6,37 @@
 课程本身不在这个仓库里 —— 它单独 clone 在 `~/workspace/ai-engineering-from-scratch`，
 保持只读，这样 `git pull` 拿上游日更永远不会冲突。
 
-和隔壁两个仓库的分工：
+## 边界
 
-| 仓库 | 记什么 |
+**这个仓库只装一件事：系统学 AI 基础。** 别的都不进来。
+
+### 进这个仓库
+
+- 线性代数、微积分、概率 —— 跟着 Phase 01 手写
+- 感知机、反向传播、优化器、自己写的 mini 框架 —— Phase 03
+- 注意力、Transformer 各个零件 —— Phase 05 / 07
+- tokenizer、预训练、SFT —— Phase 10
+
+共同点：**都是「模型里面是什么」，而且都得自己写一遍才算数。**
+
+### 不进这个仓库
+
+| 东西 | 去哪 |
 |---|---|
-| [fengandzhy/python](https://github.com/fengandzhy/python) | Python 语法，出处是 langchain demo |
-| [fengandzhy/langchain](https://github.com/fengandzhy/langchain) | LangChain / agent 的工程实验 |
-| **本仓库** | **模型层**：数学、反向传播、注意力、LLM 训练与推理 |
+| Python 语法、标准库的坑 | [fengandzhy/python](https://github.com/fengandzhy/python) |
+| LangChain、agent、工具调用、编排 | [fengandzhy/langchain](https://github.com/fengandzhy/langchain) |
+| 提示词技巧、RAG、evaluation、guardrails | 不记 —— 上班天天在做 |
+| 部署、网关、灰度、可观测 | 同上 |
+| 任何公司项目相关的东西 | 公司仓库，**一行都不要带过来** |
 
-前两个是「怎么用模型」，这个是「模型里面是什么」。
+判断标准一句话：**「怎么用模型」不进来，「模型里面是什么」才进来。**
+
+⚠ 最容易破例的是第二行。学到 Transformer 的时候很容易想「顺手把 agent 那套也整理一下」
+—— 不要。那是 langchain 仓库的事，混进来这个仓库就废了。
 
 ## 目的
 
-主业是 AI 应用/系统。补这块不是为了转去做建模，是为了**在这条路上不再瞎** ——
+补这块不是为了转去做建模，是为了**在这条路上不再瞎** ——
 当 agent 在某类任务上反复判断错，能说出这是**模型能力边界**还是**提示问题**，
 而不是继续往提示词里加字。
 
