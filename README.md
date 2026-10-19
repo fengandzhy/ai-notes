@@ -3,8 +3,10 @@
 跟着 [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch)
 学模型层的笔记。**只记自己动手写出来、或者撞到坑才明白的那部分。**
 
-课程本身不在这个仓库里 —— 它单独 clone 在 `~/workspace/ai-engineering-from-scratch`，
-保持只读，这样 `git pull` 拿上游日更永远不会冲突。
+课程原文不在这个仓库里 —— 它单独 clone 在 `~/workspace/ai-engineering-from-scratch`，
+**保持只读**，这样 `git pull` 拿上游日更永远不会冲突。
+
+这里放的是自己产出的三样东西：**手写代码**、**课文中译**、**错的直觉**。
 
 ## 边界
 
@@ -16,6 +18,7 @@
 - 感知机、反向传播、优化器、自己写的 mini 框架 —— Phase 03
 - 注意力、Transformer 各个零件 —— Phase 05 / 07
 - tokenizer、预训练、SFT —— Phase 10
+- 以及上面这些课文的**中译**（`*_zh.md`）—— 公式改写成纯文本，本地预览器能看
 
 共同点：**都是「模型里面是什么」，而且都得自己写一遍才算数。**
 
@@ -77,9 +80,12 @@ Phase 01 前几节**零依赖**，macOS 自带的 `/usr/bin/python3`（3.9.6）�
 
 ## 进度
 
-| 节 | 笔记 | 自己挑出来的错直觉 |
-|---|---|---|
-| 01·01 线性代数直觉 | [`phase-01-math/01_linear_algebra.py`](phase-01-math/01_linear_algebra.py) | 点积≠相似度 / 形状≠维度 / 相关性不是是非题 / 投影是在扔东西 |
+| 节 | 手写代码 | 课文中译 | 自己挑出来的错直觉 |
+|---|---|---|---|
+| 01·01 线性代数直觉 | [`01_linear_algebra.py`](phase-01-math/01_linear_algebra.py) | [`01_linear_algebra_zh.md`](phase-01-math/01_linear_algebra_zh.md) | 点积≠相似度 / 形状≠维度 / 相关性不是是非题 / 投影是在扔东西 |
+
+⚠ 中译里的公式**是手写的纯文本图示，不是 LaTeX 渲染**。原文用 ```` ```math ```` 块，
+本地预览器大多不认，会把 `\begin{aligned}` 这类排版指令原样印出来。
 
 ## 坑
 
