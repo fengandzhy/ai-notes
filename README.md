@@ -98,3 +98,23 @@ Phase 01 前几节**零依赖**，macOS 自带的 `/usr/bin/python3`（3.9.6）�
   形状凑巧兼容时两个都不报错，算出来的东西完全不同
 - **所有「等于零」的判断都是「小于某个阈值」。** 同一组向量，`tol=1e-9` 算出秩 2，
   `tol=1e-12` 算出秩 3。真实数据永远是「接近亏秩」，不是干净的满秩或亏秩
+
+## 环境
+
+```bash
+uv venv --python 3.14.4     # 建 .venv
+uv run python phase-01-math/01_linear_algebra.py
+```
+
+PyCharm：解释器指向 `.venv/bin/python`（`设置 → Project → Python Interpreter`）。
+
+**Phase 01 前几节是纯标准库**，不装任何依赖，用 macOS 自带的 `/usr/bin/python3`
+（3.9.6）也能跑。建 venv 是为了 PyCharm 的补全和检查，以及后面几节：
+
+```bash
+uv add numpy      # 课文 Use It 一节要
+uv add torch      # Phase 03 要，包很大，到时候再装
+```
+
+⚠ 选 3.14.4 不是随便定的：实测 torch 2.14.1 在 3.12 / 3.13 / 3.14 上都有包，
+没有约束，所以用了本机已有的那个（和隔壁 langchain 项目同版本，省一次下载）。

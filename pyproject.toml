@@ -1,0 +1,11 @@
+[project]
+name = "ai-notes"
+version = "0.1.0"
+description = "跟着 ai-engineering-from-scratch 学模型层的笔记"
+requires-python = ">=3.12"
+dependencies = []
+
+# Phase 01 前几节是纯标准库，不需要任何依赖。
+# 到了课文的 Use It 一节和 Phase 03，再按需要加：
+#   uv add numpy          Use It 用
+#   uv add torch          Phase 03 用（包很大，到时候再装）
